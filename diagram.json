@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "zoro do barco",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20230426-v1.20.0" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 38.2,
+      "left": 133.47,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd2",
+      "top": -145.34,
+      "left": 133.3,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:VCC", "pico:VBUS", "red", [ "h-51.88", "v-65.52" ] ],
+    [ "lcd1:GND", "pico:GND.8", "black", [ "h-51.88", "v-38.77" ] ],
+    [ "lcd1:SDA", "pico:GP0", "blue", [ "h-51.01", "v114.68", "h-93.01", "v-191.1" ] ],
+    [ "lcd1:SCL", "pico:GP1", "gold", [ "h-50.93", "v114.76", "h-100.99", "v-191.11" ] ],
+    [ "lcd2:VCC", "pico:VBUS", "red", [ "h-39.59", "v117.77" ] ],
+    [ "lcd2:GND", "pico:GND.1", "black", [ "h-161.23", "v159.11" ] ],
+    [ "lcd2:SDA", "pico:GP2", "green", [ "h-178.96", "v134.92" ] ],
+    [ "lcd2:SCL", "pico:GP3", "green", [ "h-178.17", "v146.03" ] ]
+  ],
+  "dependencies": {}
+}
